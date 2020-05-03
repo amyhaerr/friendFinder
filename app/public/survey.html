@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <title>Survey</title>
 </head>
 
@@ -164,12 +166,8 @@
 
     </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
     <script type="text/javascript">
+
         $("#submitBtn").on("click", function (event) {
             event.preventDefault();
 
@@ -180,35 +178,35 @@
             } else if ($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
             }
 
-        if (valid === true) {
-            var newUser = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val().trim(),
-                scores: [
-                    $("#question1").val(),
-                    $("#question2").val(),
-                    $("#question3").val(),
-                    $("#question4").val(),
-                    $("#question5").val(),
-                    $("#question6").val(),
-                    $("#question7").val(),
-                    $("#question8").val(),
-                    $("#question9").val(),
-                    $("#question10").val()
-                ]
-            };
+            if (valid === true) {
+                var newUser = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
+                };
 
-            var currentURL = window.location.origin;
+                var currentURL = window.location.origin;
 
-            // AJAX call for receiving data after POST
-            $.post(currentURL + "/api/friends", newUser, function(data){
-                $("#bestFriend").text(data.name);
-                $("bestFriendPhoto").attr("src", data.photo);
-                $("#bestFriendModal").modal("toggle");
-            });
-        } else {
-            alert("Survey is not finished");
-        }
+                // AJAX call for receiving data after POST
+                $.post(currentURL + "/api/friends", newUser, function (data) {
+                    $("#bestFriend").text(data.name);
+                    $("bestFriendPhoto").attr("src", data.photo);
+                    $("#bestFriendModal").modal("toggle");
+                });
+            } else {
+                alert("Survey is not finished");
+            }
         });
 
     </script>
