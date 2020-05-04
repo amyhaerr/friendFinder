@@ -1,3 +1,5 @@
+// an array of friends
+
 var friends = [
 
     {
