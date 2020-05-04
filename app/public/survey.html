@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <title>Survey</title>
 </head>
@@ -165,7 +165,7 @@
         </div>
 
     </div>
-
+<!-- begin JavaScript and jQuery -->
     <script type="text/javascript">
 
         $("#submitBtn").on("click", function (event) {
@@ -196,10 +196,10 @@
                     ]
                 };
 
-                var currentURL = window.location.origin;
+                // var currentURL = window.location.origin;
 
                 // AJAX call for receiving data after POST
-                $.post(currentURL + "/api/friends", newUser, function (data) {
+                $.post("/api/friends", newUser, function (data) {
                     $("#bestFriend").text(data.name);
                     $("bestFriendPhoto").attr("src", data.photo);
                     $("#bestFriendModal").modal("toggle");

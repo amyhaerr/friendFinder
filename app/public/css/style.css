@@ -1,5 +1,7 @@
 body {
-    background-image: url(../css/images/hogwarts.jpg)
+    background-image: url(../css/images/hogwarts.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #bestFriendModal {
@@ -10,3 +12,15 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.jumbotron {
+    margin: auto;
+    padding: 10px;
+    background-color:  rgba(245, 245, 220, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+    color: green;
+    font-size: 30px;
+}
+

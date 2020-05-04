@@ -2,7 +2,7 @@ var friends = [
 
     {
         "name": "Harry Potter",
-        "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F505951339370322333%2F&psig=AOvVaw1o-uc43i6wo9jI7R-LftCT&ust=1588451415735000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPDlqurAk-kCFQAAAAAdAAAAABAD",
+        "photo": "https://media.thefinder.com.sg/2018/03/harry-potter-thumbnail.jpg",
         "scores": [
             5,
             3,

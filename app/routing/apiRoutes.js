@@ -30,7 +30,7 @@ module.exports = function(app) {
 // if there is a new minimum, change the best friend index and set the new minimum for next iteration comparisons
       if(totalDiff < minDiff) {
         bestMatchIndex = i;
-        bestMatchIndex = totalDiff;
+        minDiff = totalDiff;
       }
 
     }
