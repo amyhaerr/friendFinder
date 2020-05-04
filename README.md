@@ -1,4 +1,4 @@
-# friendFinder
+# Hogwarts Friend Finder
 
 Homework #13 in Vanderbilt Coding Bootcamp
 
@@ -7,6 +7,7 @@ It's time to find out who your Hogwarts BFF will be! Will it be someone suited f
 
 ## Live Link:
 
+https://protected-scrubland-96043.herokuapp.com/
 
 
 ## Technologies Used:
