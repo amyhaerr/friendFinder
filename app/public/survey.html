@@ -175,7 +175,7 @@
 
             var valid = true;
 
-            if ($("#name").val() === "" || $("#userPhoto").val() === "") {
+            if ($("#name").val() === "" || $("#photo").val() === "") {
                 valid = false;
             } else if ($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
             }
@@ -201,7 +201,7 @@
                 // AJAX call for receiving data after POST
                 $.post("/api/friends", newUser, function (data) {
                     $("#bestFriend").text(data.name);
-                    $("bestFriendPhoto").attr("src", data.photo);
+                    $("#bestFriendPhoto").attr("src", data.photo);
                     $("#bestFriendModal").modal("toggle");
                 });
             } else {
